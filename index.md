@@ -1,13 +1,11 @@
-# Bienvenue dans mon univers ✨
+# Bienvenue sur mon univers ✨  
+Je suis **Jaelee70**, conteuse passionnée d’histoires historiques, fantastiques et inspirées de l’Asie — notamment la **Chine**, la **Corée** et le **Japon**.
 
-Je suis **Jaelee70**, conteuse d'histoires où se mêlent **fantastique, romance, action et suspens**, le tout ancré dans un décor inspiré de l’**Asie traditionnelle** — entre **Chine**, **Corée** et **Japon**.
+Dans mes récits, tu trouveras de **l’action**, de la **romance**, du **suspens**… tout ce qu’il faut pour te faire vibrer et t’immerger dans des mondes uniques et captivants.
 
-Ici, vous découvrirez plusieurs récits où mythes et émotions se croisent, portés par des personnages attachants et des univers riches. Mon but ? Vous **emmener loin du quotidien**, dans des histoires qui vous captiveront, vous feront frissonner, rêver, sourire… et peut-être même verser une petite larme.
+J’écris pour faire rêver, pour faire frissonner, pour t’embarquer dans des aventures où, toi aussi, tu pourrais t’imaginer à la place des héros et héroïnes.
 
-> Lire, c’est s’échapper. Écrire, c’est inviter à s’évader.
+🖼️ Chaque histoire est accompagnée d’illustrations générées par IA — réalisées par moi-même — qui donnent vie aux scènes et aux personnages. Certaines images seront accessibles en **bonus exclusif** pour les soutiens du site 💖
 
-Chaque œuvre est accompagnée d’**illustrations générées par IA**, créées avec soin pour représenter les scènes clés des histoires. Certaines images exclusives seront disponibles en **bonus pour les lectrices et lecteurs qui souhaitent me soutenir** dans cette aventure.
-
-Ce site est né d’un simple amour : **l’amour de raconter**. J’espère que vous y trouverez autant de plaisir à lire que j’en ai eu à imaginer ces mondes.
-
-Merci d’être là, et… bonne immersion 🖋️🐉
+Je crée cet espace pour **partager mon amour des histoires inventées** et pour te faire découvrir **des univers passionnants**.  
+Merci d’être là, j’espère que tu t’y sentiras bien 🌙
