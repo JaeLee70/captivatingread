@@ -1,9 +1,13 @@
+---
+layout: layout.njk
+title: Bienvenue
+---
+
 # Bienvenue sur mon univers ✨  
+
 Je suis **Jaelee70**, conteuse passionnée d’histoires historiques, fantastiques et inspirées de l’Asie — notamment la **Chine**, la **Corée** et le **Japon**.
 
 Dans mes récits, tu trouveras de **l’action**, de la **romance**, du **suspens**… tout ce qu’il faut pour te faire vibrer et t’immerger dans des mondes uniques et captivants.
-
-J’écris pour faire rêver, pour faire frissonner, pour t’embarquer dans des aventures où, toi aussi, tu pourrais t’imaginer à la place des héros et héroïnes.
 
 🖼️ Chaque histoire est accompagnée d’illustrations générées par IA — réalisées par moi-même — qui donnent vie aux scènes et aux personnages. Certaines images seront accessibles en **bonus exclusif** pour les soutiens du site 💖
 
