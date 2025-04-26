@@ -16,34 +16,20 @@
     h1 {
       color: #ba3b46;
     }
-    a {
-      color: #ba3b46;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    nav {
+      margin-bottom: 2rem;
     }
     nav ul {
       padding: 0;
       list-style: none;
       display: flex;
-      gap: 1rem;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
     }
-  </style>
-</head>
-<body>
-  <nav>
-    <ul>
-      {% for entry in collections.all %}
-        {% if entry.data.eleventyNavigation %}
-          <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
+    nav li {
+      margin: 0;
+    }
+    nav a {
+      color: #
 
-  <main>
-    {{ content | safe }}
-  </main>
-</body>
-</html>
