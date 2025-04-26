@@ -37,33 +37,17 @@
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 	</head>
 	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+  <nav>
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/stories/">Histoires</a></li>
+      <li><a href="/bonus/">Bonus IA</a></li>
+      <li><a href="/about/">À propos</a></li>
+    </ul>
+  </nav>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-		<nav>
-  <ul>
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/stories/">Histoires</a></li>
-    <li><a href="/bonus/">Bonus IA</a></li>
-    <li><a href="/about/">À propos</a></li>
-  </ul>
-</nav>
-		</header>
+  {{ content | safe }}
 
-		<main id="skip">
-			<heading-anchors>
-				{{ content | safe }}
-			</heading-anchors>
-		</main>
-
-		<footer>
-			<p><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
-		</footer>
-
-		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
-	</body>
+</body>
 </html>
