@@ -23,12 +23,27 @@
     a:hover {
       text-decoration: underline;
     }
+    nav ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      {% for entry in collections.all %}
+        {% if entry.data.eleventyNavigation %}
+          <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+
   <main>
     {{ content | safe }}
   </main>
 </body>
 </html>
-
