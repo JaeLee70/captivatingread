@@ -11,13 +11,14 @@
   <header>
     <a class="home-link" href="/">Jaelee70</a>
 
-  <nav>
+ <nav>
   <ul>
-    {% for nav in navigation %}
-      <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+    {% for entry in collections.eleventyNavigation %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
     {% endfor %}
   </ul>
 </nav>
+
   </header>
 
   <main>
