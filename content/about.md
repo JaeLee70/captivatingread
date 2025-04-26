@@ -1,9 +1,11 @@
----js
-const eleventyNavigation = {
-	key: "About",
-	order: 3
-};
 ---
-# About
+title: À propos
+layout: layout.njk
+eleventyNavigation:
+  key: À propos
+  order: 2
+---
 
-I am a person that writes stuff.
+# À propos de moi
+
+Quelques informations intéressantes sur moi...
