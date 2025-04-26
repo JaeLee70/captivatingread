@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/index.css"> 
+  <link rel="stylesheet" href="/css/index.css"> {# Ajoute ton CSS global ici #}
 </head>
 <body>
   <nav>
-    <ul class="nav">
+    <ul>
       {% for entry in collections.eleventyNavigation %}
-        <li class="nav-item">
+        <li>
           <a href="{{ entry.url }}" class="{% if page.url == entry.url %}active{% endif %}">
             {{ entry.title }}
           </a>
@@ -24,6 +24,3 @@
   </main>
 </body>
 </html>
-
-
-
