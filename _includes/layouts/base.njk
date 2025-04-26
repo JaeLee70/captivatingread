@@ -12,6 +12,10 @@
       background-color: #333;
     }
 
+    nav ul li {
+      margin: 0;
+    }
+
     nav ul li a {
       display: block;
       padding: 14px 20px;
@@ -32,8 +36,20 @@
 </head>
 <body>
 
-  {{ content | safe }}
+  <!-- Ajout du menu directement ici -->
+  <nav>
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/apropos/">À propos</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {{ content | safe }}
+  </main>
 
 </body>
 </html>
+
 
