@@ -16,35 +16,6 @@
     h1 {
       color: #ba3b46;
     }
-    nav {
-      margin-bottom: 2rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-      gap: 2rem;
-    }
-    nav li {
-      margin: 0;
-    }
-    nav a {
-      color: #ba3b46;
-      text-decoration: none;
-      font-weight: bold;
-      padding-bottom: 4px;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-    }
-    nav a:hover {
-      border-bottom: 2px solid #ba3b46;
-    }
-    nav a.active {
-      border-bottom: 2px solid #ba3b46;
-    }
     a {
       color: #ba3b46;
       text-decoration: none;
@@ -52,17 +23,21 @@
     a:hover {
       text-decoration: underline;
     }
+    nav ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
   </style>
 </head>
 <body>
   <nav>
     <ul>
-      {% for entry in collections.eleventyNavigation %}
-        <li>
-          <a href="{{ entry.url }}" class="{% if page.url == entry.url %}active{% endif %}">
-            {{ entry.title }}
-          </a>
-        </li>
+      {% for entry in collections.all %}
+        {% if entry.data.eleventyNavigation %}
+          <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </nav>
@@ -72,4 +47,5 @@
   </main>
 </body>
 </html>
+
 
