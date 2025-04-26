@@ -34,8 +34,10 @@
 <body>
   <nav>
     <ul>
-      {% for entry in collections.eleventyNavigation %}
-        <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
+      {% for entry in collections.all %}
+        {% if entry.data.eleventyNavigation %}
+          <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </nav>
@@ -45,4 +47,3 @@
   </main>
 </body>
 </html>
-
