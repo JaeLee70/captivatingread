@@ -1,9 +1,8 @@
 ---
-layout: layout.njk
-title: Bienvenue
+title: À propos
 eleventyNavigation:
-  key: Accueil
-  order: 0
+  key: À propos
+  order: 1
 ---
 
 # Bienvenue sur mon univers ✨  
