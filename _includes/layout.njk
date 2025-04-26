@@ -11,19 +11,13 @@
   <header>
     <a class="home-link" href="/">Jaelee70</a>
 
-    <nav>
-      <ul class="nav">
-        {% for entry in collections.all %}
-          {% if entry.data.eleventyNavigation %}
-            <li class="nav-item">
-              <a href="{{ entry.url }}" {% if page.url == entry.url %}aria-current="page"{% endif %}>
-                {{ entry.data.eleventyNavigation.key }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
+  <nav>
+  <ul>
+    {% for nav in navigation %}
+      <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
   </header>
 
   <main>
