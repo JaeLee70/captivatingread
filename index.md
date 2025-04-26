@@ -1,6 +1,9 @@
 ---
 layout: layout.njk
 title: Bienvenue
+eleventyNavigation:
+  key: Accueil
+  order: 0
 ---
 
 # Bienvenue sur mon univers ✨  
