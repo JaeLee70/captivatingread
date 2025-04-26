@@ -1,28 +1,39 @@
-<!doctype html>
-<html lang="{{ metadata.language }}">
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title or metadata.title }}</title>
-	<meta name="description" content="{{ description or metadata.description }}">
-	<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-  
-	<link rel="stylesheet" href="/css/index.css">
-  
-	<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
-</head>
-	<body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <style>
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #333;
+    }
 
-  <nav>
-    <ul>
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/stories/">Histoires</a></li>
-      <li><a href="/bonus/">Bonus IA</a></li>
-      <li><a href="/about/">À propos</a></li>
-    </ul>
-  </nav>
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
 
   {{ content | safe }}
 
 </body>
 </html>
+
