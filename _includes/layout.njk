@@ -13,63 +13,43 @@
       background-color: #fefefe;
       color: #333;
     }
-    h1 {
-      color: #ba3b46;
-    }
-    nav {
+    header {
       margin-bottom: 2rem;
     }
     nav ul {
       list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       padding: 0;
-      margin: 0;
-      gap: 2rem;
-    }
-    nav li {
-      margin: 0;
+      display: flex;
+      gap: 1rem;
     }
     nav a {
       color: #ba3b46;
       text-decoration: none;
       font-weight: bold;
-      padding-bottom: 4px;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
     }
     nav a:hover {
-      border-bottom: 2px solid #ba3b46;
-    }
-    nav a.active {
-      border-bottom: 2px solid #ba3b46;
-    }
-    a {
-      color: #ba3b46;
-      text-decoration: none;
-    }
-    a:hover {
       text-decoration: underline;
+    }
+    h1 {
+      color: #ba3b46;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      {% for entry in collections.eleventyNavigation %}
-        <li>
-          <a href="{{ entry.url }}" class="{% if page.url == entry.url %}active{% endif %}">
-            {{ entry.title }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <ul>
+        {% for item in collections.eleventyNavigation %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
 
   <main>
     {{ content | safe }}
   </main>
 </body>
 </html>
+
 
