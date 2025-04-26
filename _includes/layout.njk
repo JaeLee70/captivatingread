@@ -4,17 +4,40 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/index.css"> {# Ajoute ton CSS global ici #}
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 2rem;
+      background-color: #fefefe;
+      color: #333;
+    }
+    h1 {
+      color: #ba3b46;
+    }
+    a {
+      color: #ba3b46;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    nav ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
     <ul>
-      {% for entry in collections.eleventyNavigation %}
-        <li>
-          <a href="{{ entry.url }}" class="{% if page.url == entry.url %}active{% endif %}">
-            {{ entry.title }}
-          </a>
-        </li>
+      {% for entry in collections.all %}
+        {% if entry.data.eleventyNavigation %}
+          <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </nav>
