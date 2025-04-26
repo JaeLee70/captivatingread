@@ -4,12 +4,27 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <style>
+    /* Style général */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* Style du menu */
+    nav {
+      background-color: #333;
+    }
+
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      background-color: #333;
     }
 
     nav ul li {
@@ -26,17 +41,11 @@
     nav ul li a:hover {
       background-color: #575757;
     }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Ajout du menu directement ici -->
+  <!-- Menu de navigation -->
   <nav>
     <ul>
       <li><a href="/">Accueil</a></li>
@@ -45,11 +54,13 @@
     </ul>
   </nav>
 
+  <!-- Contenu principal -->
   <main>
     {{ content | safe }}
   </main>
 
 </body>
 </html>
+
 
 
