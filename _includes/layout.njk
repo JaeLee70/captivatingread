@@ -4,43 +4,23 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 2rem;
-      background-color: #fefefe;
-      color: #333;
-    }
-    h1 {
-      color: #ba3b46;
-    }
-    a {
-      color: #ba3b46;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    nav ul {
-      padding: 0;
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-    }
-  </style>
+
+  <!-- Ici je relie ton fichier CSS externe -->
+  <link rel="stylesheet" href="/css/main.css">
+
 </head>
 <body>
- <nav>
-  <ul class="nav">
-    {% for entry in collections.all %}
-      {% if entry.data.eleventyNavigation %}
-        <li class="nav-item"><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
+  <nav>
+    <ul class="nav">
+      {% for entry in collections.all %}
+        {% if entry.data.eleventyNavigation %}
+          <li class="nav-item">
+            <a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
 
   <main>
     {{ content | safe }}
