@@ -4,26 +4,29 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-  <nav>
-    <ul class="nav">
-      {% for entry in collections.all %}
-        {% if entry.data.eleventyNavigation %}
-          <li class="nav-item">
-            <a href="{{ entry.url }}" {% if page.url == entry.url %} class="active" {% endif %}>
-              {{ entry.data.eleventyNavigation.key }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
+
+  <header>
+    <nav>
+      <ul class="nav">
+        {% for entry in collections.all %}
+          {% if entry.data.eleventyNavigation %}
+            <li class="nav-item">
+              <a href="{{ entry.url }}" {% if page.url == entry.url %} aria-current="page" {% endif %}>
+                {{ entry.data.eleventyNavigation.key }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
 
   <main>
     {{ content | safe }}
   </main>
+
 </body>
 </html>
