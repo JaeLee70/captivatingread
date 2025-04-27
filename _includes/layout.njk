@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 2rem;
+      background-color: #fefefe;
+      color: #333;
+    }
+    h1 {
+      color: #ba3b46;
+    }
+    a {
+      color: #ba3b46;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    nav ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul>
+      {% for entry in collections.all %}
+        {% if entry.data.eleventyNavigation %}
+          <li><a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a></li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </nav>
 
-  <div class="content">
-    <!-- Your page content goes here -->
-  </div>
+  <main>
+    {{ content | safe }}
+  </main>
 </body>
 </html>
-
