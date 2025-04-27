@@ -309,3 +309,15 @@ header {
 .nav-item a.active {
   border-bottom: 2px solid #ba3b46;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row; /* <-- AJOUTE CETTE LIGNE */
+  gap: 1rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
