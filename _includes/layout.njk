@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Lien vers ton fichier CSS -->
   <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -14,7 +16,10 @@
         {% for entry in collections.all %}
           {% if entry.data.eleventyNavigation %}
             <li class="nav-item">
-              <a href="{{ entry.url }}" {% if page.url == entry.url %} aria-current="page" {% endif %}>
+              <a 
+                href="{{ entry.url }}" 
+                {% if entry.url == page.url %}aria-current="page"{% endif %}
+              >
                 {{ entry.data.eleventyNavigation.key }}
               </a>
             </li>
@@ -28,5 +33,10 @@
     {{ content | safe }}
   </main>
 
+  <footer>
+    <p>&copy; {{ "now" | date: "%Y" }} Jaelee70. Tous droits réservés.</p>
+  </footer>
+
 </body>
 </html>
+
