@@ -5,9 +5,7 @@
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Ici je relie ton fichier CSS externe -->
   <link rel="stylesheet" href="/css/main.css">
-
 </head>
 <body>
   <nav>
@@ -15,7 +13,9 @@
       {% for entry in collections.all %}
         {% if entry.data.eleventyNavigation %}
           <li class="nav-item">
-            <a href="{{ entry.url }}">{{ entry.data.eleventyNavigation.key }}</a>
+            <a href="{{ entry.url }}" {% if page.url == entry.url %} class="active" {% endif %}>
+              {{ entry.data.eleventyNavigation.key }}
+            </a>
           </li>
         {% endif %}
       {% endfor %}
