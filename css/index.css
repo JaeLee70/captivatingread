@@ -90,3 +90,37 @@ img {
   overflow: hidden;
   white-space: nowrap;
 }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fefefe;
+  color: #333;
+}
+
+h1 {
+  color: #ba3b46;
+}
+
+a {
+  color: #ba3b46;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+}
