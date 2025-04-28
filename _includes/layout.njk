@@ -8,15 +8,12 @@
 </head>
 <body>
 
-<header>
   <nav>
     <ul class="nav">
       {% for entry in collections.all %}
         {% if entry.data.eleventyNavigation %}
           <li class="nav-item">
-            <a href="{{ entry.url }}"
-              {% if entry.url == page.url %} aria-current="page"{% endif %}
-            >
+            <a href="{{ entry.url }}">
               {{ entry.data.eleventyNavigation.key }}
             </a>
           </li>
@@ -24,15 +21,10 @@
       {% endfor %}
     </ul>
   </nav>
-</header>
 
-<main>
-  {{ content | safe }}
-</main>
-
-<footer>
-  <p>&copy; {{ "now" | date: "%Y" }} Jaelee70. Tous droits réservés.</p>
-</footer>
+  <main>
+    {{ content | safe }}
+  </main>
 
 </body>
 </html>
